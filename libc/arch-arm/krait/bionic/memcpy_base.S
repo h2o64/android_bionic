@@ -208,8 +208,7 @@ MEMCPY_BASE_ALIGNED:
 	ldrbmi	r3, [r1]
 	strbmi	r3, [r0]
 .Lneon_exit:
-	pop	{r0, lr}
-	bx	lr
+	pop	{r0, pc}
         //.cfi_endproc
 END(MEMCPY_BASE)
 
